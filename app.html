@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow — Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="app-page">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">⚡</div>
+        <div>
+            <h1>⚡ TaskFlow</h1>
+            <p>Твой личный таск-менеджер</p>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="avatar" id="userAvatar">R</div>
+        <div>
+          <h2 id="userName">Пользователь</h2>
+          <p id="userEmail">email@example.com</p>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span>Level</span>
+          <strong id="userLevel">1</strong>
+        </div>
+        <div class="stat-box">
+          <span>XP</span>
+          <strong id="userXp">0</strong>
+        </div>
+        <div class="stat-box">
+          <span>Win streak</span>
+          <strong id="userStreak">0</strong>
+        </div>
+        <div class="stat-box">
+          <span>Rank</span>
+          <strong id="userRank">Bronze</strong>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>🏆 Ранги</h3>
+        <ul class="rank-list">
+          <li>Bronze</li>
+          <li>Silver</li>
+          <li>Gold</li>
+          <li>Platinum</li>
+          <li>Diamond</li>
+          <li>Master</li>
+          <li>Legend</li>
+        </ul>
+      </div>
+
+      <button id="logoutBtn" class="btn-secondary">🚪 Выйти</button>
+
+    </aside>
+
+    <main class="main-content">
+        <div class="view-tabs">
+          <button type="button" class="view-tab active" id="tasksTab">📝 Задачи</button>
+          <button type="button" class="view-tab" id="plannedTab">📆 Запланированные</button>
+          <button type="button" class="view-tab" id="historyTab">🕒 История</button>
+        </div>
+      
+        <div id="tasksView">
+          <section class="hero-card">
+            <div>
+              <h2>🚀 Добро пожаловать обратно</h2>
+              <p>Создавай разделы, добавляй задачи и прокачивай streak каждый день.</p>
+            </div>
+            <div class="hero-badge" id="todayBadge">Today</div>
+          </section>
+      
+          <section class="panel">
+            <div class="panel-head">
+              <h3>📁 Разделы</h3>
+              <button class="btn-mini" id="openSectionForm">➕ Новый раздел</button>
+            </div>
+            <div class="section-list" id="sectionList"></div>
+          </section>
+      
+          <section class="panel">
+            <div class="panel-head">
+              <h3 id="activeSectionTitle">📝 Все задачи</h3>
+              <button class="btn-mini" id="openTaskForm">➕ Новая задача</button>
+            </div>
+            <div class="task-list" id="taskList"></div>
+          </section>
+        </div>
+      
+        <div id="plannedView" class="hidden">
+          <section class="panel">
+            <div class="panel-head">
+              <h3>📆 Запланированные задачи</h3>
+            </div>
+            <div class="task-list" id="plannedTaskList"></div>
+          </section>
+        </div>
+      
+        <div id="historyView" class="hidden">
+          <section class="panel">
+            <div class="panel-head">
+              <h3>🕒 История по датам</h3>
+            </div>
+            <div class="history-list" id="historyList"></div>
+          </section>
+        </div>
+      </main>
+  </div>
+
+  <div class="modal hidden" id="sectionModal">
+    <div class="modal-card">
+      <h3>Новый раздел</h3>
+      <input type="text" id="sectionName" placeholder="Например: Работа" />
+      <div class="modal-actions">
+        <button class="btn-secondary" id="closeSectionModal">Отмена</button>
+        <button class="btn-primary" id="saveSectionBtn">Создать</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="taskModal">
+    <div class="modal-card">
+      <h3>Новая задача</h3>
+      <input type="text" id="taskTitle" placeholder="Название задачи" />
+      <textarea id="taskNote" placeholder="Описание или заметка"></textarea>
+      <input type="date" id="taskDueDate" />
+      <select id="taskSection"></select>
+      <div class="modal-actions">
+        <button class="btn-secondary" id="closeTaskModal">Отмена</button>
+        <button class="btn-primary" id="saveTaskBtn">Добавить</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
