@@ -12,8 +12,8 @@
       <div class="brand">
         <div class="brand-icon">⚡</div>
         <div>
-            <h1>⚡ TaskFlow</h1>
-            <p>Твой личный таск-менеджер</p>
+          <h1>⚡ TaskFlow</h1>
+          <p>Твой личный таск-менеджер</p>
         </div>
       </div>
 
@@ -47,73 +47,73 @@
       <div class="sidebar-card">
         <h3>🏆 Ранги</h3>
         <ul class="rank-list">
-          <li>Bronze</li>
-          <li>Silver</li>
-          <li>Gold</li>
-          <li>Platinum</li>
-          <li>Diamond</li>
-          <li>Master</li>
-          <li>Legend</li>
+          <li>🥉 Bronze</li>
+          <li>🥈 Silver</li>
+          <li>🥇 Gold</li>
+          <li>💠 Platinum</li>
+          <li>💎 Diamond</li>
+          <li>🔥 Master</li>
+          <li>👑 Legend</li>
         </ul>
       </div>
 
       <button id="logoutBtn" class="btn-secondary">🚪 Выйти</button>
-
     </aside>
 
     <main class="main-content">
-        <div class="view-tabs">
-          <button type="button" class="view-tab active" id="tasksTab">📝 Задачи</button>
-          <button type="button" class="view-tab" id="plannedTab">📆 Запланированные</button>
-          <button type="button" class="view-tab" id="historyTab">🕒 История</button>
-        </div>
-      
-        <div id="tasksView">
-          <section class="hero-card">
-            <div>
-              <h2>🚀 Добро пожаловать обратно</h2>
-              <p>Создавай разделы, добавляй задачи и прокачивай streak каждый день.</p>
-            </div>
-            <div class="hero-badge" id="todayBadge">Today</div>
-          </section>
-      
-          <section class="panel">
-            <div class="panel-head">
-              <h3>📁 Разделы</h3>
-              <button class="btn-mini" id="openSectionForm">➕ Новый раздел</button>
-            </div>
-            <div class="section-list" id="sectionList"></div>
-          </section>
-      
-          <section class="panel">
-            <div class="panel-head">
-              <h3 id="activeSectionTitle">📝 Все задачи</h3>
-              <button class="btn-mini" id="openTaskForm">➕ Новая задача</button>
-            </div>
-            <div class="task-list" id="taskList"></div>
-          </section>
-        </div>
-      
-        <div id="plannedView" class="hidden">
-          <section class="panel">
-            <div class="panel-head">
-              <h3>📆 Запланированные задачи</h3>
-            </div>
-            <div class="task-list" id="plannedTaskList"></div>
-          </section>
-        </div>
-      
-        <div id="historyView" class="hidden">
-          <section class="panel">
-            <div class="panel-head">
-              <h3>🕒 История по датам</h3>
-            </div>
-            <div class="history-list" id="historyList"></div>
-          </section>
-        </div>
-      </main>
+      <div class="view-tabs">
+        <button type="button" class="view-tab active" id="tasksTab">📝 Задачи</button>
+        <button type="button" class="view-tab" id="plannedTab">📆 Запланированные</button>
+        <button type="button" class="view-tab" id="historyTab">🕒 История</button>
+      </div>
+
+      <div id="tasksView">
+        <section class="hero-card">
+          <div>
+            <h2>🚀 Добро пожаловать обратно</h2>
+            <p>Создавай разделы, добавляй задачи и прокачивай streak каждый день.</p>
+          </div>
+          <div class="hero-badge" id="todayBadge">Today</div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h3>📁 Разделы</h3>
+            <button class="btn-mini" id="openSectionForm">➕ Новый раздел</button>
+          </div>
+          <div class="section-list" id="sectionList"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h3 id="activeSectionTitle">📝 Все задачи</h3>
+            <button class="btn-mini" id="openTaskForm">➕ Новая задача</button>
+          </div>
+          <div class="task-list" id="taskList"></div>
+        </section>
+      </div>
+
+      <div id="plannedView" class="hidden">
+        <section class="panel">
+          <div class="panel-head">
+            <h3>📆 Запланированные задачи</h3>
+          </div>
+          <div class="task-list" id="plannedTaskList"></div>
+        </section>
+      </div>
+
+      <div id="historyView" class="hidden">
+        <section class="panel">
+          <div class="panel-head">
+            <h3>🕒 История по датам</h3>
+          </div>
+          <div class="history-list" id="historyList"></div>
+        </section>
+      </div>
+    </main>
   </div>
 
+  <!-- Модалки вне app-shell, прямо перед </body> -->
   <div class="modal hidden" id="sectionModal">
     <div class="modal-card">
       <h3>Новый раздел</h3>
